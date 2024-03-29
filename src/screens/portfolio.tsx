@@ -2,8 +2,20 @@ import LeftPart from "../components/leftpart";
 import MobileMenu from "../components/mobile/menu";
 import Preloader from "../components/preloader";
 import Rightpart from "../components/righttpart";
+import { FloatButton } from 'antd';
+import { useEffect, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const Portfolio = () => {
+
+    const [hideLeftPart, setHideLeftPart] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (isMobile) {
+            setHideLeftPart(true)
+        }
+    }, [isMobile])
+
     return (
         < div className="arlo_tm_wrapper_all" >
 
@@ -26,15 +38,23 @@ const Portfolio = () => {
             <div className="arlo_tm_content">
 
                 {/* <!-- LEFTPART --> */}
-                <LeftPart />
+                <LeftPart
+                    hideLeftPart={hideLeftPart}
+                    setHideLeftPart={setHideLeftPart}
+                />
                 {/* <!-- /LEFTPART --> */}
 
                 {/* <!-- RIGHTPART --> */}
-                <Rightpart />
+                <Rightpart
+                    hideLeftPart={hideLeftPart}
+                    setHideLeftPart={setHideLeftPart}
+                />
                 {/* <!-- /RIGHTPART --> */}
 
-                <a className="arlo_tm_totop" href="#"></a>
-
+                {/* <a className="arlo_tm_totop" href="#"></a> */}
+                <FloatButton.BackTop
+                    tooltip={<div>Click về đầu trang</div>}
+                />
             </div>
         </div >
     )

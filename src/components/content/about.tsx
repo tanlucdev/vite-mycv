@@ -1,11 +1,28 @@
-import kentoLogo from '../../assets/img/about/avt.jpg'
-import myCv from '../../assets/CV_NguyenTanLuc.pdf'
+import kentoLogo from '@/assets/img/about/avt.png'
 import { TypeAnimation } from 'react-type-animation';
+import { useRef, useEffect } from 'react';
+import Parallax from 'parallax-js';
 
 const About = () => {
+    const sceneEl = useRef(null);
+
+    useEffect(() => {
+        if (sceneEl && sceneEl.current) {
+            const parallaxInstance = new Parallax(sceneEl.current, {
+                relativeInput: true,
+                hoverOnly: true
+            })
+
+            parallaxInstance.enable();
+
+            return () => parallaxInstance.disable();
+        }
+
+    }, [])
+
     return (
         <>
-            <div className="arlo_tm_section relative" id="about">
+            <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100 }}>
                 <div className="arlo_tm_about_wrapper_all">
                     <div className="container">
                         <div className="arlo_tm_title_holder">
@@ -15,13 +32,16 @@ const About = () => {
                         <div className="arlo_tm_about_wrap">
                             <div className="author_wrap">
                                 <div className="leftbox">
-                                    <div className="about_image_wrap parallax" data-relative-input="true">
-                                        <div className="image layer" data-depth="0.1">
-                                            <img src="img/about/550x640.jpg" alt="550x640" />
-                                            <div className="inner" data-img-url={kentoLogo}></div>
+                                    <div ref={sceneEl} className="about_image_wrap parallax" data-relative-input="true">
+                                        <div className="image layer" data-depth="0.2">
+                                            <img src={kentoLogo} alt="550x640" />
+                                            <div className="inner" data-img-url={kentoLogo}
+                                                style={{ backgroundImage: `url(${kentoLogo})` }}
+
+                                            ></div>
                                         </div>
-                                        <div className="border layer" data-depth="0.2">
-                                            <img src="img/about/550x640.jpg" alt="550x640" />
+                                        <div className="border layer" data-depth="0.6">
+                                            <img src={kentoLogo} alt="550x640" />
                                             <div className="inner"></div>
                                         </div>
                                     </div>
@@ -29,46 +49,50 @@ const About = () => {
                                 </div>
                                 <div className="rightbox">
                                     <div className="arlo_tm_mini_title_holder">
-                                        <h4>Mình là
+                                        <h4>I'm
+                                            {/* &thinsp; */}
                                             &nbsp;
                                             <TypeAnimation
                                                 sequence={[
-                                                    // Same substring at the start will only be typed out once, initially
                                                     'Tấn Lực',
                                                     3000,
-                                                    'lập trình viên website',
+                                                    'Web Developer',
                                                     3000,
                                                 ]}
                                                 wrapper="span"
                                                 cursor={true}
                                                 speed={50}
-                                                // style={{ fontSize: '2em', display: 'inline-block' }}s
-                                                repeat={Infinity} placeholder={undefined} />
+                                                onPointerEnterCapture={undefined}
+                                                onPointerLeaveCapture={undefined}
+                                                repeat={Infinity}
+                                                placeholder={undefined}
+                                            />
+
                                         </h4>
                                     </div>
                                     <div className="definition">
                                         <p>
-                                            Xin chào! Mình tên là <strong>Lực</strong>.
-                                            là sinh viên năm 4 của đại học Tôn Đức Thắng. Mọi người nhận xét mình là một người đam mê và tận tâm với công việc.
+                                            Hello world! I'm <strong>Lực</strong>,
+                                            I am currently in my fourth year, pursuing a degree in Software Engineering at Ton Duc Thang
+                                            University. Armed with specialized knowledge acquired through my academic journey, I am excited
+                                            about the prospect of stepping into the role of an Intern Web Developer.
                                             <br /><br />
-                                            Với chuyên môn kiến thức đã được học, mình mong muốn trở thành một thực tập sinh phát triển website. Mình sẽ cố gắng hoàn thành tốt nhiệm vụ được giao, học hỏi thêm kinh nghiệm nghề nghiệp và phấn đấu trở thành một lập trình viên giàu kinh nghiệm và tay nghề cao.</p>
+                                            My commitment lies in executing assigned tasks diligently, acquiring further professional experiences, and striving to ascend as a proficient and adept Web Developer.</p>
                                     </div>
                                     <div className="about_short_contact_wrap">
                                         <ul>
                                             <li>
-                                                <span><label>Ngày sinh:</label> 28.07.2002</span>
+                                                <span><label>D.o.b:</label> 28.07.2002</span>
                                             </li>
                                             <li>
-                                                <span><label>Giới tính:</label> Nam</span>
+                                                <span><label>Gender:</label> Male</span>
                                             </li>
                                             <li>
-                                                <span><label>Trường:</label> Đại học Tôn Đức Thắng</span>
+                                                <span><label>University:</label> Ton Duc Thang University</span>
                                             </li>
                                             <li>
-                                                <span><label>Chuyên ngành: </label> Kỹ thuật phần mềm</span>
+                                                <span><label>Major: </label> Software Technology</span>
                                             </li>
-
-
                                             <li>
                                                 <span><label>Mail:</label> <a href="mailto:tanlucdev@gmail.com">tanlucdev&#64;gmail.com</a></span>
                                             </li>
@@ -86,7 +110,7 @@ const About = () => {
                                     <div className="buttons_wrap">
                                         <ul>
                                             <li>
-                                                <a href={myCv} download><span>Download CV</span></a>
+                                                <a href="https://drive.google.com/file/d/1KLfw279zUsNzozeAJ-P8EPGitBgrXhSr/view?usp=sharing" download><span>View CV</span></a>
                                             </li>
                                         </ul>
                                     </div>
