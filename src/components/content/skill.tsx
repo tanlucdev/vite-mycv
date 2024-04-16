@@ -1,4 +1,6 @@
 import ProgressBar from "@ramonak/react-progress-bar";
+import { Col, Row } from 'antd'
+import tsIcon from '@/assets/img/skill/typescript.png'
 const Skill = () => {
     return (
         <>
@@ -15,49 +17,32 @@ const Skill = () => {
                             </div>
                             <div className="rightbox">
                                 <div className="progress_bar_wrap_total">
-                                    <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
-                                        <div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">HTML/CSS/JavaScript</span>
-                                                <span className="number">95%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={95}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">React.JS (Typescript)</span>
-                                                <span className="number">95%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={95}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div><div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">Design UI/UX</span>
-                                                <span className="number">95%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={95}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Row gutter={16}>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/html.svg" alt="" />
+                                                <p>HTML</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg" alt="" />
+                                                <p>CSS</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
+                                                <p>JavaScript</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg" alt="" />
+                                                <p>React</p>
+                                            </a>
+                                        </Col>
+                                    </Row>
                                 </div>
                             </div>
                         </div>
@@ -76,49 +61,32 @@ const Skill = () => {
                             </div>
                             <div className="rightbox">
                                 <div className="progress_bar_wrap_total">
-                                    <div className="arlo_tm_progress_wrap" data-size="small" data-round="c" data-strip="off">
-                                        <div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">Typescript</span>
-                                                <span className="number">90%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={90}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">Express</span>
-                                                <span className="number">95%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={95}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div><div className="arlo_tm_progress" data-value="95" data-color="#000">
-                                            <span>
-                                                <span className="label">Database SQL/MongoDB</span>
-                                                <span className="number">90%</span>
-                                            </span>
-                                            <div className="arlo_tm_bar_bg">
-                                                <ProgressBar
-                                                    completed={90}
-                                                    bgColor={"#333"}
-                                                    height="8px"
-                                                    isLabelVisible={false}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <Row gutter={16}>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src={tsIcon} alt="" />
+                                                <p>HTML</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg" alt="" />
+                                                <p>CSS</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
+                                                <p>JavaScript</p>
+                                            </a>
+                                        </Col>
+                                        <Col span={6}>
+                                            <a href="https://www.w3schools.com/html/default.asp">
+                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
+                                                <p>JavaScript</p>
+                                            </a>
+                                        </Col>
+                                    </Row>
                                 </div>
                             </div>
                         </div>

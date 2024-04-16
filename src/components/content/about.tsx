@@ -1,4 +1,4 @@
-import kentoLogo from '@/assets/img/about/avt.png'
+import kentoLogo from '@/assets/img/about/avt.jpg'
 import { TypeAnimation } from 'react-type-animation';
 import { useRef, useEffect } from 'react';
 import Parallax from 'parallax-js';
@@ -110,7 +110,7 @@ const About = () => {
                                     <div className="buttons_wrap">
                                         <ul>
                                             <li>
-                                                <a href="https://drive.google.com/file/d/1KLfw279zUsNzozeAJ-P8EPGitBgrXhSr/view?usp=sharing" download><span>View CV</span></a>
+                                                <a href="https://drive.google.com/file/d/1ofziKylpeEfaubcvF4MUbtl6FI3kLAAB/view?usp=sharing" download><span>View CV</span></a>
                                             </li>
                                         </ul>
                                     </div>

@@ -1,6 +1,5 @@
 import About from "./content/about";
 import HomeCV from "./content/homecv";
-// import './styles/style.scss';
 import '../styles/style.scss';
 import Skill from "./content/skill";
 import Project from "./content/project";

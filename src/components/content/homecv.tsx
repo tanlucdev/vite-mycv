@@ -33,8 +33,6 @@ const HomeCV = () => {
                                                 // Same substring at the start will only be typed out once, initially
                                                 'Web Developer',
                                                 3000,
-                                                'UI/UX Designer',
-                                                3000,
                                                 'Business Analysis',
                                                 3000
                                             ]}

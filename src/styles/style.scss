@@ -261,6 +261,7 @@ img.svg {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
 }
 
 .arlo_tm_content {
@@ -892,6 +893,8 @@ img.svg {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+
+
     }
 
     .subtitle {
@@ -1248,6 +1251,39 @@ img.svg {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 20px;
+        background-color: #bdc3c7;
+        padding: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        transition: transform 0.3s;
+        color: black;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+    }
+
+    a img {
+        height: 60px;
+        width: 60px;
+        transition: transform 0.3s;
+    }
+
+    a:hover img {
+        transform: scale(1.1);
+    }
+
+    a p {
+        text-align: center;
+    }
+
 }
 
 .arlo_tm_progress_wrap[data-size="big"] {
