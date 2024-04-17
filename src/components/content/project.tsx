@@ -6,6 +6,8 @@ import { GiHouse } from "react-icons/gi";
 import { BsTicketPerforatedFill } from "react-icons/bs";
 import { BsTranslate } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { Image } from 'antd'
+import Item from 'antd/es/list/Item';
 
 interface IProject {
     image: JSX.Element;
@@ -18,11 +20,24 @@ interface IProject {
         member: number,
         role: string,
         github: string,
+        image: string,
+        items: string[]
     }
 }
+
+
 const Project = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [dataDetail, setDataDetail] = useState<IProject | null>(null);
+    const [previewImage, setPreviewImage] = useState<string[]>([]);
+
+
+    // const toggleImages = () => {
+    //     setShowImages(!showImages);
+    // };
+
+
+
     const showModal = () => {
         setIsModalOpen(true);
     };
@@ -49,6 +64,13 @@ const Project = () => {
                 member: 1,
                 role: "Developer",
                 github: " https://github.com/tanlucdev/hotel-booking-site.git",
+                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                items: [
+                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
+                ]
+
             }
         },
         {
@@ -65,6 +87,12 @@ const Project = () => {
                 member: 1,
                 role: "Developer",
                 github: " https://github.com/tanlucdev/ticket-booking-site.git",
+                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                items: [
+                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
+                ]
             },
         },
         {
@@ -81,6 +109,12 @@ const Project = () => {
                 member: 1,
                 role: "Developer",
                 github: " https://github.com/tanlucdev/tenant-management-system.git",
+                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                items: [
+                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
+                ]
             },
         },
         {
@@ -97,6 +131,12 @@ const Project = () => {
                 member: 2,
                 role: "Developer",
                 github: " https://github.com/tanlucdev/tenant-management-system.git",
+                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                items: [
+                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
+                ]
             },
         },
         {
@@ -113,6 +153,12 @@ const Project = () => {
                 member: 1,
                 role: "Developer",
                 github: " github.com/tanlucdev/vite-mycv",
+                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                items: [
+                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
+                    'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
+                ]
             },
         },
 
@@ -143,6 +189,29 @@ const Project = () => {
                         <a href={dataDetail.detail.github} target='_blank'>
                             {dataDetail.detail.github}
                         </a>
+                    </li>
+                    <li>
+                        <b>Interface:</b>
+                        <br />
+                        <Image width={100} src={dataDetail.detail.image} preview={{ visible: false }} onClick={() => {
+                            setPreviewImage(dataDetail.detail.items)
+                        }}>
+
+                        </Image>
+                        {previewImage.length > 0 ?
+                            (<Image.PreviewGroup preview={{
+                                visible: !!previewImage.length, onVisibleChange: (value) => {
+                                    if (!value) {
+                                        setPreviewImage([])
+                                    }
+                                }
+                            }}>
+                                {previewImage.map((image) => {
+                                    return <Image width={100} src={image} />
+                                })}
+                            </Image.PreviewGroup>)
+                            : null
+                        }
                     </li>
                 </ul>
             }

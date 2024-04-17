@@ -55,7 +55,7 @@ const Skill = () => {
                                 <div className="arlo_tm_mini_title_holder">
                                     <h4>Backend Skills</h4>
                                 </div>
-                                <li>Programming languages: Typescript, Python</li>
+                                <li>Programming languages: Typescript</li>
                                 <li>Framework: Express, Nest.Js</li>
                                 <li>Database: SQL, MongoDB</li>
                             </div>
@@ -65,25 +65,25 @@ const Skill = () => {
                                         <Col span={6}>
                                             <a href="https://www.w3schools.com/html/default.asp">
                                                 <img src={tsIcon} alt="" />
-                                                <p>HTML</p>
+                                                <p>TypeScript</p>
                                             </a>
                                         </Col>
                                         <Col span={6}>
                                             <a href="https://www.w3schools.com/html/default.asp">
-                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg" alt="" />
-                                                <p>CSS</p>
+                                                <img src="https://img.icons8.com/nolan/64/express-js.png" alt="" />
+                                                <p>ExpressJs</p>
                                             </a>
                                         </Col>
                                         <Col span={6}>
                                             <a href="https://www.w3schools.com/html/default.asp">
-                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
-                                                <p>JavaScript</p>
+                                                <img src="https://img.icons8.com/color/480/mongodb.png" alt="" />
+                                                <p>MongoDB</p>
                                             </a>
                                         </Col>
                                         <Col span={6}>
                                             <a href="https://www.w3schools.com/html/default.asp">
-                                                <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
-                                                <p>JavaScript</p>
+                                                <img src="https://img.icons8.com/color/480/my-sql.png" alt="" />
+                                                <p>MySQL</p>
                                             </a>
                                         </Col>
                                     </Row>
