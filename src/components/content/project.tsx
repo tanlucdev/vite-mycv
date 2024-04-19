@@ -64,9 +64,9 @@ const Project = () => {
                 member: 1,
                 role: "Developer",
                 github: " https://github.com/tanlucdev/hotel-booking-site.git",
-                image: 'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                image: 'https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png',
                 items: [
-                    'https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp',
+                    'https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png',
                     'https://gw.alipayobjects.com/zos/antfincdn/cV16ZqzMjW/photo-1473091540282-9b846e7965e3.webp',
                     'https://gw.alipayobjects.com/zos/antfincdn/x43I27A55%26/photo-1438109491414-7198515b166b.webp',
                 ]
@@ -207,7 +207,7 @@ const Project = () => {
                                 }
                             }}>
                                 {previewImage.map((image) => {
-                                    return <Image width={100} src={image} />
+                                    return <Image width={50} src={image} />
                                 })}
                             </Image.PreviewGroup>)
                             : null
