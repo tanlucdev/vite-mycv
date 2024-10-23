@@ -110,7 +110,7 @@ const About = () => {
                                     <div className="buttons_wrap">
                                         <ul>
                                             <li>
-                                                <a href="https://drive.google.com/file/d/1ofziKylpeEfaubcvF4MUbtl6FI3kLAAB/view?usp=sharing" download><span>View CV</span></a>
+                                                <a href="https://drive.google.com/file/d/11_4cvJQZb3tma1Bk_yCMttBKBw4x0D3P/view?usp=sharing" download><span>View CV</span></a>
                                             </li>
                                         </ul>
                                     </div>
