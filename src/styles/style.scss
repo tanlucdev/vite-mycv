@@ -1491,7 +1491,7 @@ img.svg {
                     float: left;
                     position: relative;
                     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
-                    padding: 40px 40px 33px 40px;
+                    padding: 25px 25px 25px 18px;
                     top: 0px;
                     -webkit-transition: all .3s ease;
                     -moz-transition: all .3s ease;
@@ -3567,3 +3567,16 @@ img.svg {
         padding: 94px 0px 48px 0px;
     }
 }
+
+.ant-image-preview-img {
+    width: 200px;
+}
+
+
+// .ant-image-img {
+//     display: none;
+// }
+
+// .ant-image-mask {
+//     display: contents !important;
+// }

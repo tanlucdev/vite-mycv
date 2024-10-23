@@ -1,4 +1,4 @@
-import imgMobile from '@/assets/img/logo/123.png'
+import imgMobile from '@/assets/img/logo/mobile_logo.png'
 import { useState } from 'react'
 const MobileMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +27,8 @@ const MobileMenu = () => {
             <div className="arlo_tm_mobile_header_wrap">
                 <div className="main_wrap">
                     <div className="logo" style={{ color: "white", fontSize: "18px", fontWeight: "600" }}>
-                        {/* <a href="#"><img src={imgMobile} alt="mobile_logo" /></a> */}
-                        TanLucDev
+                        <a href="#"><img src={imgMobile} alt="mobile_logo" /></a>
+                        {/* TanLucDev */}
                     </div>
                     <div className="arlo_tm_trigger">
                         <div

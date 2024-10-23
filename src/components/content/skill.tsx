@@ -13,7 +13,7 @@ const Skill = () => {
                                     <h4>Frontend Skills</h4>
                                 </div>
                                 <li>Interface design using Figma</li>
-                                <li>Framework/Library: Bootstrap, JQuery, Antd, React.JS</li>
+                                <li>Framework/Library: Bootstrap, JQuery, Antd, ReactJs</li>
                             </div>
                             <div className="rightbox">
                                 <div className="progress_bar_wrap_total">
@@ -56,7 +56,7 @@ const Skill = () => {
                                     <h4>Backend Skills</h4>
                                 </div>
                                 <li>Programming languages: Typescript</li>
-                                <li>Framework: Express, Nest.Js</li>
+                                <li>Framework: Express.js</li>
                                 <li>Database: SQL, MongoDB</li>
                             </div>
                             <div className="rightbox">

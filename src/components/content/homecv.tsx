@@ -33,7 +33,7 @@ const HomeCV = () => {
                                                 // Same substring at the start will only be typed out once, initially
                                                 'Web Developer',
                                                 3000,
-                                                'Business Analysis',
+                                                'Software Engineer',
                                                 3000
                                             ]}
                                             wrapper="span"

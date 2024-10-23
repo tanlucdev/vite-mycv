@@ -9,8 +9,38 @@ interface IProps {
     hideLeftPart: boolean;
     setHideLeftPart: (value: boolean) => void;
 }
+
 const LeftPart = (props: IProps) => {
-    const [activeTab, setActivetab] = useState<String>("home")
+    const [activeTab, setActivetab] = useState<string>("home");
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = ['home', 'about', 'skills', 'project', 'contact'];
+            let currentTab = activeTab;
+
+            for (let section of sections) {
+                const sectionElement = document.getElementById(section);
+                if (sectionElement) {
+                    const { top, bottom } = sectionElement.getBoundingClientRect();
+
+                    // Check if section is in the viewport
+                    if (top <= window.innerHeight / 2 && bottom > window.innerHeight / 2) {
+                        currentTab = section;
+                        break;
+                    }
+                }
+            }
+
+            if (currentTab !== activeTab) {
+                setActivetab(currentTab);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup scroll event listener on unmount
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [activeTab]);
 
     useEffect(() => {
         const { hash } = window.location;
@@ -22,7 +52,7 @@ const LeftPart = (props: IProps) => {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
-    }, [])
+    }, []);
 
     const handleClickTab = (tab: string, event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
@@ -32,9 +62,10 @@ const LeftPart = (props: IProps) => {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
             setTimeout(() => {
                 window.location.hash = tab;
-            }, 1000)
+            }, 1000);
         }
-    }
+    };
+
     return (
         <>
             <div className={props.hideLeftPart === true ? "arlo_tm_leftpart_wrap opened" : "arlo_tm_leftpart_wrap"}>
@@ -47,35 +78,35 @@ const LeftPart = (props: IProps) => {
                             <li>
                                 <a href="#home"
                                     className={activeTab === 'home' ? "active" : ""}
-                                    onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('home', event)}
+                                    onClick={(event) => handleClickTab('home', event)}
                                 >Home
                                 </a>
                             </li>
                             <li>
                                 <a href="#about"
                                     className={activeTab === 'about' ? "active" : ""}
-                                    onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('about', event)}
+                                    onClick={(event) => handleClickTab('about', event)}
                                 >About
                                 </a>
                             </li>
                             <li>
                                 <a href="#skills"
                                     className={activeTab === 'skills' ? "active" : ""}
-                                    onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('skills', event)}
+                                    onClick={(event) => handleClickTab('skills', event)}
                                 >Skill
                                 </a>
                             </li>
                             <li>
                                 <a href="#project"
                                     className={activeTab === 'project' ? "active" : ""}
-                                    onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('project', event)}
+                                    onClick={(event) => handleClickTab('project', event)}
                                 >Project
                                 </a>
                             </li>
                             <li>
                                 <a href="#contact"
                                     className={activeTab === 'contact' ? "active" : ""}
-                                    onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => handleClickTab('contact', event)}
+                                    onClick={(event) => handleClickTab('contact', event)}
                                 >Contact
                                 </a>
                             </li>
@@ -124,6 +155,7 @@ const LeftPart = (props: IProps) => {
                 </div>
             </div>
         </>
-    )
+    );
 }
+
 export default LeftPart;
