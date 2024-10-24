@@ -73,11 +73,9 @@ const About = () => {
                                     <div className="definition">
                                         <p>
                                             Hello world! I'm <strong>Lực</strong>,
-                                            I am currently in my fourth year, pursuing a degree in Software Engineering at Ton Duc Thang
-                                            University. Armed with specialized knowledge acquired through my academic journey, I am excited
-                                            about the prospect of stepping into the role of an Intern Web Developer.
+                                            I recently graduated with a degree in Software Engineering from Ton Duc Thang University. With the specialized knowledge I have gained throughout my academic journey, I am committed to diligently completing assigned tasks, continuously gaining professional experience, and striving to grow into a proficient and skilled Software Engineer.
                                             <br /><br />
-                                            My commitment lies in executing assigned tasks diligently, acquiring further professional experiences, and striving to ascend as a proficient and adept Web Developer.</p>
+                                            My long-term goal is to become a Senior Software Engineer, where I can contribute more deeply to critical projects and lead development teams.</p>
                                     </div>
                                     <div className="about_short_contact_wrap">
                                         <ul>
@@ -110,7 +108,7 @@ const About = () => {
                                     <div className="buttons_wrap">
                                         <ul>
                                             <li>
-                                                <a href="https://drive.google.com/file/d/11_4cvJQZb3tma1Bk_yCMttBKBw4x0D3P/view?usp=sharing" download><span>View CV</span></a>
+                                                <a href="https://drive.google.com/file/d/1k_rG7sAL7BERUhZG6A9UCVqaJ-MCJwvf/view?usp=sharing" download><span>View CV</span></a>
                                             </li>
                                         </ul>
                                     </div>
