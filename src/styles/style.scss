@@ -1252,7 +1252,7 @@ img.svg {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
-    a {
+    span {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1266,21 +1266,21 @@ img.svg {
         color: black;
     }
 
-    a:hover {
+    span:hover {
         transform: scale(1.1);
     }
 
-    a img {
+    span img {
         height: 60px;
         width: 60px;
         transition: transform 0.3s;
     }
 
-    a:hover img {
+    span:hover img {
         transform: scale(1.1);
     }
 
-    a p {
+    span p {
         text-align: center;
     }
 

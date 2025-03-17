@@ -1,4 +1,3 @@
-import ProgressBar from "@ramonak/react-progress-bar";
 import { Col, Row } from 'antd'
 import tsIcon from '@/assets/img/skill/typescript.png'
 const Skill = () => {
@@ -19,28 +18,28 @@ const Skill = () => {
                                 <div className="progress_bar_wrap_total">
                                     <Row gutter={16}>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/html.svg" alt="" />
                                                 <p>HTML</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg" alt="" />
                                                 <p>CSS</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/javascript.svg" alt="" />
                                                 <p>JavaScript</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/react.svg" alt="" />
                                                 <p>React</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                     </Row>
                                 </div>
@@ -63,28 +62,28 @@ const Skill = () => {
                                 <div className="progress_bar_wrap_total">
                                     <Row gutter={16}>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src={tsIcon} alt="" />
                                                 <p>TypeScript</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span >
                                                 <img src="https://img.icons8.com/nolan/64/express-js.png" alt="" />
                                                 <p>ExpressJs</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span >
                                                 <img src="https://img.icons8.com/color/480/mongodb.png" alt="" />
                                                 <p>MongoDB</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                         <Col span={6}>
-                                            <a href="https://www.w3schools.com/html/default.asp">
+                                            <span>
                                                 <img src="https://img.icons8.com/color/480/my-sql.png" alt="" />
                                                 <p>MySQL</p>
-                                            </a>
+                                            </span>
                                         </Col>
                                     </Row>
                                 </div>
