@@ -1,6 +1,9 @@
 import { TypeAnimation } from 'react-type-animation';
 import kentoLogo from '@/assets/img/hero/kentoLogo.png'
-const HomeCV = () => {
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+const HomeCV = (props: any) => {
     const handleScrollAbout = () => {
         const section = document.querySelector('#about');
         if (section) {
@@ -9,7 +12,7 @@ const HomeCV = () => {
     }
     return (
         <>
-            <div className="arlo_tm_section" id="home">
+            <div className="arlo_tm_section" id="home" data-aos={props.animation}>
                 <div className="arlo_tm_hero_header_wrap">
                     <div className="arlo_tm_universal_box_wrap">
                         <div className="bg_wrap">

@@ -2,10 +2,10 @@ import kentoLogo from '@/assets/img/about/avt.jpg'
 import { TypeAnimation } from 'react-type-animation';
 import { useRef, useEffect } from 'react';
 import Parallax from 'parallax-js';
-
-const About = () => {
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+const About = (props: any) => {
     const sceneEl = useRef(null);
-
     useEffect(() => {
         if (sceneEl && sceneEl.current) {
             const parallaxInstance = new Parallax(sceneEl.current, {
@@ -17,12 +17,11 @@ const About = () => {
 
             return () => parallaxInstance.disable();
         }
-
     }, [])
 
     return (
         <>
-            <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100 }}>
+            <div className="arlo_tm_section relative" id="about" style={{ paddingTop: 100 }} data-aos={props.animation}>
                 <div className="arlo_tm_about_wrapper_all">
                     <div className="container">
                         <div className="arlo_tm_title_holder">

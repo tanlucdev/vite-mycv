@@ -1,7 +1,7 @@
-const Contact = () => {
+const Contact = (props: any) => {
     return (
         <>
-            <div className="arlo_tm_section" id="contact">
+            <div className="arlo_tm_section" id="contact" data-aos={props.animation}>
                 <div className="container">
                     <div className="arlo_tm_title_holder contact">
                         <h3>Contact me</h3>

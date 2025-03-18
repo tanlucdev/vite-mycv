@@ -29,7 +29,7 @@ interface IProject {
 }
 
 
-const Project = () => {
+const Project = (props: any) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [dataDetail, setDataDetail] = useState<IProject | null>(null);
     const [previewImage, setPreviewImage] = useState<string[]>([]);
@@ -139,7 +139,7 @@ const Project = () => {
                 </ul>
             }
         </Modal>
-        <div className="arlo_tm_section" id="project">
+        <div className="arlo_tm_section" id="project" data-aos={props.animation}>
             <div className="arlo_tm_services_wrap">
                 <div className="container">
                     <div className="arlo_tm_title_holder">

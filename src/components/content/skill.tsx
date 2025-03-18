@@ -1,9 +1,16 @@
 import { Col, Row } from 'antd'
 import tsIcon from '@/assets/img/skill/typescript.png'
-const Skill = () => {
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
+const Skill = (props: any) => {
+    // useEffect(() => {
+    //     Aos.init({ duration: 1000 });
+    // }, []);
     return (
         <>
-            <div className="arlo_tm_section" id="skills">
+            <div className="arlo_tm_section" id="skills" data-aos={props.animation}>
                 <div className="arlo_tm_skills_wrap">
                     <div className="container">
                         <div className="inner_wrap">
