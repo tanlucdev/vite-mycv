@@ -1,0 +1,51 @@
+.skills-container {
+  background-color: #0F1012;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.skill-header {
+  text-align: center;
+  color: white;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4ade80;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: #bababb;
+  }
+
+  .description {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+  }
+}
+
+.skill-logos {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+  mask-image: linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%);
+}
+
+.skill-logo {
+  height: 40px;
+  width: 100px;
+  padding: 5px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
