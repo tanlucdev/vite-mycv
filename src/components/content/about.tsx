@@ -107,7 +107,7 @@ const About = (props: any) => {
                                     <div className="buttons_wrap">
                                         <ul>
                                             <li>
-                                                <a href="https://drive.google.com/file/d/1k_rG7sAL7BERUhZG6A9UCVqaJ-MCJwvf/view?usp=sharing" download><span>View CV</span></a>
+                                                <a href="https://drive.google.com/file/d/1O7QCPjdztF2FcIKOv08-j3WjTyyavw-3/view?usp=sharing" target="blank" download><span>View CV</span></a>
                                             </li>
                                         </ul>
                                     </div>

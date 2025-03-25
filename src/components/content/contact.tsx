@@ -18,7 +18,9 @@ const Contact = (props: any) => {
                                 <div className="short_info_wrap">
                                     <ul>
                                         <li><p><label>Email:</label><span><a href="mailto:tanlucdev@gmail.com">tanlucdev@gmail.com</a></span></p></li>
-                                        <li><p><label>Website:</label><span><a href="/">tanluc.click</a></span></p></li>
+                                        <li><p><label>Website:</label><span><a href="/">tanlucdev.vercel.app</a></span></p></li>
+                                        <li><p><label>Threads:</label><span><a href="https://www.threads.net/@tanlucdev" target="blank">tanlucdev</a></span></p></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -33,7 +35,7 @@ const Contact = (props: any) => {
                     </div>
                     <div className="arlo_tm_footer_wrap">
                         <div className="container">
-                            <p>&copy; Copyright 2024 by TanLucDev. All Rights are Reserved.</p>
+                            <p>&copy; Copyright 2025 by TanLucDev. All Rights are Reserved.</p>
                         </div>
                     </div>
                 </div>
