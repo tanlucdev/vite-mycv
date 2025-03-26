@@ -1,4 +1,4 @@
-import { Col, Row, Layout, Typography, Card } from 'antd'
+import { Col, Row,Popover } from 'antd'
 import tsIcon from '@/assets/img/skill/typescript.png'
 import { useInView, motion } from "framer-motion";
 import { useRef } from "react";
@@ -21,37 +21,10 @@ import postman from '@/assets/img/skill/postman.svg';
 import redux from '@/assets/img/skill/redux.svg';
 import tailwind from '@/assets/img/skill/tailwind.svg';
 import typescript from '@/assets/img/skill/typescript.svg';
-
+import './skill.scss'
 import 'aos/dist/aos.css';
 const Skill = (props: any) => {
     const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { once: false, margin: "-100px" })
-
-    const { Content } = Layout;
-    const { Title, Text } = Typography;
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.2
-            }
-        }
-    }
-
-    const headerVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: [0.4, 0.02, 0.2, 0.97]
-            }
-        }
-    }
     return (
         <>
             <div className="arlo_tm_section" id="skills" data-aos={props.animation}>
@@ -73,7 +46,9 @@ const Skill = (props: any) => {
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/html.svg" alt="" />
                                                 <p>HTML</p>
                                             </span>
+                                            
                                         </Col>
+                                       
                                         <Col span={6}>
                                             <span>
                                                 <img src="https://cdn.jsdelivr.net/gh/PKief/vscode-material-icon-theme@main/icons/css.svg" alt="" />

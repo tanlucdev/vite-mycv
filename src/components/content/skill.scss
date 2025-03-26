@@ -49,3 +49,10 @@
     transform: scale(1.1);
   }
 }
+
+.progress_bar_wrap_total .ant-col{
+  span:hover{
+    cursor: pointer;
+  }
+}
+
